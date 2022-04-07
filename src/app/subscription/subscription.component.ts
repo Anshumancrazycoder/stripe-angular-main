@@ -32,8 +32,8 @@ export class SubscriptionComponent {
   private async checkout(priceId: string): Promise<void> {
     const checkout = {
       priceId: priceId,
-      cancelUrl: 'http://localhost:4200/canceled',
-      successUrl: 'http://localhost:4200/success',
+      cancelUrl: 'http://ec2-54-242-249-20.compute-1.amazonaws.com/canceled',
+      successUrl: 'http://ec2-54-242-249-20.compute-1.amazonaws.com/success',
     };
     const stripe = await this.stripePromise;
     // this is a normal http calls for a backend api
